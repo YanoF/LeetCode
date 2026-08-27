@@ -15,3 +15,17 @@ class Solution(object):
             x //= 10
 
         return x == reverted or x == reverted // 10
+
+
+    ''''
+    Logic:
+
+    Negative numbers and numbers ending in 0 (except 0 itself) can't be palindromes — return False immediately.
+
+    Reverse only the second half of the number by repeatedly peeling off the last digit of x and appending it 
+    to reverted, stopping once x <= reverted (the midpoint).
+
+    For even-length numbers, x == reverted. For odd-length numbers, the middle digit sits in reverted, so drop it 
+    with reverted // 10 before comparing.
+
+    '''
